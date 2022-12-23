@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="8_aOVZ73ugr88TQEa-A8M_7YHn-5YGtJWZhQ8th9Li0" />
+<!-- FONT  -->
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
+
+    <title>Welcome To My Page</title>
+    <style>
+         body{
+            padding:15px;
+            background-color: black;
+            color: White;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: column;
+            
+        }
+        .cont img{
+            border-radius: 50%;
+            
+        }
+        .follow img{
+            width: 50px;
+        }
+        .follow a{
+            width: 60px;
+            padding:0 25px
+        }
+        .follow{
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            width:100%;
+            bottom: 3px;
+            flex-wrap:wrap;
+            
+        }
+        .info{
+            position:relative;
+            display: flex;
+            font-family: 'Courier New', Courier, monospace;
+            align-items: center;
+            color: rgba(230, 62, 140, 0.973);
+            animation: anim 5s infinite;
+            font-size: 1.5rem;
+            
+        }
+        .info p{
+            padding: 0 5px;
+        }
+        .folow{
+            margin:50px 0 0 0;
+            flex-flow: column;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .logo img{
+            width: 15vh;
+        }
+        .myinfo{
+            text-align: center;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: large;
+        }
+        .follow a img:hover{
+            transform: scale(1.2);
+            transform:rotate(360deg);
+            transition-duration: 0.3s;
+            filter: brightness(1);
+            
+        }
+        .follow a img{
+
+            filter: brightness(0.7);
+        }
+        h4{
+            font-size: 1.2rem;
+        }
+        .vansh{
+            margin-top: 14px;
+            z-index: -1;
+            bottom: 5%;
+            font-family: 'Bungee Shade', cursive;
+            opacity: 0.8;
+            animation: vansh1 0.5s ;
+            animation-iteration-count: infinite;
+            font-size: large;
+            left: -10%;
+            left: 5%;
+            animation-fill-mode: forwards; 
+            /* animation-direction: revert; */
+            
+        }
+        .vansh h2{
+            margin: 0;
+            padding: 0;
+        }
+        
+        @keyframes vansh1 {
+            0%{
+                border-right: 2px solid rgb(0, 0, 0);
+                transform: scale(1.1);
+                /* bottom: 15%; */
+                /* animation-play-state: paused; */
+            }
+            25%{
+                /* bottom: 15%; */
+                border-right: 2px solid rgb(73, 176, 157);
+                /* transform: scale(1.5); */
+                
+                /* left: 15%; */
+                /* transform: rotate(25deg); */
+                /* transform: translate(0%, 0%); */
+                /* color: rgba(238, 34, 129, 0.973); */
+                /* background-color: currentColor+ cyan; */
+                
+            }
+            50%{
+                border-right: 2px solid rgb(0, 0, 0);
+                transform: scale(1.5);
+                /* bottom: 15%;
+                left: 15%; */
+                transform: rotate(0deg);
+                /* transform: scale(1); */
+                /* bottom: 85%; */
+                /* transform: translate(35%, 32%); */
+                /* color: rgb(142, 36, 228); */
+            }
+            75%{
+                border-right: 2px solid black;
+                /* bottom: 15%;
+                left: 15%; */
+                transform: rotate(-25deg);
+                transform: scale(1.1);
+                /* bottom: 19%; */
+                /* transform: translate(0px, 0px); */
+                /* color: rgb(88, 167, 81); */
+                
+            }
+            100%{
+                /* bottom: 15%;
+                left: 15%; */
+                border-right: 10px solid rgb(255, 255, 255);
+                /* position: relative; */
+                text-align: center;
+                transform: scale(1.2);
+
+                /* transform: translate(100%, 100%); */
+                color: #ce80a7;
+
+            }
+        }
+
+
+
+        @keyframes anim {
+            10%{
+                
+                color: rgba(238, 34, 129, 0.973);
+            }
+            40%{
+                
+                color: rgb(142, 36, 228);
+            }
+            60%{
+                color: rgb(88, 167, 81);
+                
+            }
+            100%{
+                color: rgb(233, 142, 90);
+
+            }
+        }
+        @media only screen and (max-width:600px){
+            .info{
+                /* font-size: 1.5rem; */
+                flex-flow:column ;
+            }
+            .info p{
+            
+                padding: 5px;
+                margin: 0;
+            }
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <h1>Hi, I'm Vansh.</h1>
+       
+
+    <img src="logoimg/IMG_20220102_180916.jpg" alt="" width="200" height="200">    
+    </div>
+    <div class="info">
+        <p>Programmer</p>
+        <p>Devloper</p>
+        <p>Engineer</p>
+        <p>Designer</p>
+        <div class="logo">
+            <img src="logoimg/kisspng-computer-programming-web-development-computer-soft-coder-5ac6d6012fdda4.9202230715229803531961.png" alt="">
+        </div>
+    </div>
+    <div  class="vansh">
+        <h2>HTML</h2>
+    </div>
+    <p class="myinfo">
+        I like working on <strong>Programming Projects</strong><br>
+
+        Exploring the <strong>New Technologies</strong>
+        <br>
+        <br>
+        Motivated Towards my Goals.
+
+    </p>
+    
+    <footer class="folow"> 
+        <h4>Connect with me on</h4>
+        <div class="follow">
+            <a href="https://www.instagram.com/vansh1190/" target="_blank"> <img src="logoimg/instalogo.png" alt="insta_logo"></a>
+            <a href="https://in.linkedin.com/in/vansh-kumar-4774a9218" target="_blank"> <img src="logoimg/linkedin-icon-logo-png-transparent.png"height="48px" alt="IN_logo"></a>
+            <a href="https://twitter.com/Vansh1190" target="_blank"><img src="logoimg/twitte_logo.png" height="48px" alt="Twitter_logo"></a>
+            <a href= "https://replit.com/@vanshk605" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Repl.it_logo.svg/768px-Repl.it_logo.svg.png?20190414162605" width="18vh" height="48px" alt="Twitter_logo"></a>
+        </div>
+        
+    </footer>
+
+
+
+    <script>
+        let n = 1;
+        let skills = ["JAVASCRIPT","</HTML>","CSS", "BOOTSTRAP"]
+        let f = ()=>{
+            
+        setInterval(async()=>{
+            if(n==4){
+                n=0;
+            }
+            let target = document.querySelector(".vansh").childNodes[1];
+
+                await( document.querySelector(".vansh").childNodes[1].innerHTML = skills[n]);
+                n++;
+            }
+        ,5000)
+        }
+
+        
+        // f();
+        let speed  = 500;
+        let i =0 ;
+        let pos = 1;
+        let flag = true;
+        console.log(skills[i])
+
+
+            setTimeout(()=>{
+                document.querySelector(".vansh").childNodes[1].innerHTML = "";
+            },speed)
+            
+            let dd = setInterval(()=>{
+                if(i == skills[pos].length){
+                    document.querySelector(".vansh").childNodes[1].innerHTML = "";
+                    pos++;
+                i=0
+            }
+            if(pos== (skills.length)){
+                console.log("DDD")
+                pos = 0
+                // clearInterval(dd)
+            }
+            
+            if(flag){
+                
+                console.log(skills[pos][i])
+                document.querySelector(".vansh").childNodes[1].innerHTML += skills[pos][i];
+                i++
+            }
+            // console.log(" I ",i)
+        },speed)
+
+        </script>
+        </body>
+        </html>
