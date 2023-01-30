@@ -55,7 +55,7 @@
             padding: 0 5px;
         }
         .folow{
-            margin:50px 0 0 0;
+            margin:50px 0 50px 0;
             flex-flow: column;
             display: flex;
             justify-content: center;
@@ -68,6 +68,7 @@
             text-align: center;
             font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
             font-size: large;
+            color: #dec7d2;
         }
         .follow a img:hover{
             transform: scale(1.2);
@@ -76,6 +77,7 @@
             filter: brightness(1);
             
         }
+     
         .follow a img{
 
             filter: brightness(0.7);
@@ -96,11 +98,74 @@
             left: 5%;
             animation-fill-mode: forwards; 
             /* animation-direction: revert; */
-            
         }
         .vansh h2{
             margin: 0;
             padding: 0;
+        }
+        #projects{
+            
+            padding: 15px 25px;
+             background: linear-gradient(45deg, #0d245a, #576286);
+             cursor: pointer;
+             /* width: 250px;
+             height: 80px; */
+             color: #cf97b0;
+             font-size: larger;
+             font-weight: 600;
+             font-family: 'Bungee Shade';
+             border-radius: 21px;
+             overflow: hidden;
+             position: relative;
+             background: transparent;
+             /* border: 0.5px solid white; */
+             border-radius: 15px;
+            }
+            .projects2{
+        
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(45deg, #0d245a, #576286);
+                z-index: -2;
+                transform: translateX(-225px); 
+                top: 0;
+                left: 0;
+                /* animation: buttonAnim 0.4s linear;
+                animation-play-state:paused;
+                animation-fill-mode: forwards; */
+                
+                /* border: 2px solid white; */
+                /* border-radius: 15px; */
+        }
+        #projects img{
+            width: 10px;
+            vertical-align: super;
+            
+            filter: invert(74%) sepia(30%) saturate(3207%) hue-rotate(289deg) brightness(98%) contrast(88%);
+        }
+        #projects:hover {
+            transform: scale(0.9);
+            transition-duration: 0.5s;
+            color: #b06084;
+        }
+
+        @keyframes buttonAnim{
+            0%{
+                transform: translateX(-225px);
+            }
+            100%{
+                transform: translateX(0px);
+            }
+        }
+        @keyframes buttonAnimLeave{
+            0%{
+                transform: translateX(0px);
+            }
+            100%{
+                transform: translateX(225px);
+            }
         }
         
         @keyframes vansh1 {
@@ -190,7 +255,7 @@
             }
             .follow a {
 
-              padding: 4px 16px;
+              padding: 4px 18px;
             }
 
 
@@ -228,14 +293,20 @@
     </p>
     
     <footer class="folow"> 
-        <h4>Connect with me on</h4>
+        <a href="https://vansh1190.github.io/My-Journey-with-web/">
+
+            <button id="projects">
+                <div class="projects2"></div>
+                My Projects <img src="https://static.thenounproject.com/png/640392-200.png" alt="">
+            </button>
+        </a>
+        <h4 style="color: #dec7d2;">Connect with me on</h4>
         <div class="follow">
             <a href="https://www.instagram.com/vansh1190/" target="_blank"> <img src="logoimg/instalogo.png" alt="insta_logo"></a>
-            <a href="https://in.linkedin.com/in/vansh1190" target="_blank"> <img src="logoimg/linkedin-icon-logo-png-transparent.png"height="48px" alt="IN_logo"></a>
+            <a href="https://in.linkedin.com/in/vansh-kumar-4774a9218" target="_blank"> <img src="logoimg/linkedin-icon-logo-png-transparent.png"height="48px" alt="IN_logo"></a>
             <a href="https://twitter.com/Vansh1190" target="_blank"><img src="logoimg/twitte_logo.png" height="48px" alt="Twitter_logo"></a>
-            <a href="https://github.com/Vansh1190" target="_blank"><img src="https://visualpharm.com/assets/720/Github-595b40b65ba036ed117d442f.svg" height="48px" alt="Twitter_logo"></a>
+            <a href="https://twitter.com/Vansh1190" target="_blank"><img src="https://visualpharm.com/assets/720/Github-595b40b65ba036ed117d442f.svg" height="48px" alt="Twitter_logo"></a>
             <a href= "https://replit.com/@vanshk605" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Repl.it_logo.svg/768px-Repl.it_logo.svg.png?20190414162605" width="18vh" height="48px" alt="Twitter_logo"></a>  
-           
         </div>
         
     </footer>
@@ -265,7 +336,7 @@
         let i =0 ;
         let pos = 1;
         let flag = true;
-        console.log(skills[i])
+        // console.log(skills[i])
 
 
             setTimeout(()=>{
@@ -279,19 +350,40 @@
                 i=0
             }
             if(pos== (skills.length)){
-                console.log("DDD")
+                // console.log("DDD")
                 pos = 0
                 // clearInterval(dd)
             }
             
             if(flag){
                 
-                console.log(skills[pos][i])
+                // console.log(skills[pos][i])
                 document.querySelector(".vansh").childNodes[1].innerHTML += skills[pos][i];
                 i++
             }
             // console.log(" I ",i)
         },speed)
+
+
+        
+        document.getElementById("projects").addEventListener("mouseenter",function(){
+            let x = document.getElementById("projects").getBoundingClientRect()
+                
+            // document.getElementsByClassName("projects2")[0].style.animationPlayState = "running"
+            document.getElementsByClassName("projects2")[0].style.animation = "buttonAnim 0.5s ease-in-out"
+            document.getElementsByClassName("projects2")[0].style.animationFillMode = "forwards"
+            // document.getElementsByClassName("projects2")[0].style.animation = "forwards"
+        })
+        document.getElementById("projects").addEventListener("mouseleave",function(){
+            // console.log("DJ")
+            let x = document.getElementById("projects").getBoundingClientRect()
+            // console.log(x.top ,window.innerHeight)
+            console.log("HELLO")
+            document.getElementsByClassName("projects2")[0].style.animation = "buttonAnimLeave 0.5s ease-in-out"
+                
+           
+        })
+
 
         </script>
         </body>
