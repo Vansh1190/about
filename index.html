@@ -8,7 +8,8 @@
     <link rel = "icon" href="logoimg/IMG_20220102_180916.jpg">
 <!-- FONT  -->
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
-
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <title>Welcome To My Page</title>
     <style>
          body{
@@ -282,7 +283,8 @@
     <div  class="vansh">
         <h2>HTML</h2>
     </div>
-    <p class="myinfo">
+    <p data-aos="fade-up"
+    data-aos-duration="1000" class="myinfo">
         I like working on <strong>Development Projects</strong><br>
         Tech lover, curious and willing enough to try anything 
         
@@ -294,16 +296,16 @@
 
     </p>
     
-    <footer class="folow"> 
+    <footer  class="folow"> 
         <a href="https://vansh1190.github.io/My-Journey-with-web/">
 
-            <button id="projects">
+            <button  id="projects">
                 <div class="projects2"></div>
                 My Projects <img src="https://static.thenounproject.com/png/640392-200.png" alt="">
             </button>
         </a>
         <h4 style="color: #dec7d2;">Connect with me on</h4>
-        <div class="follow">
+        <div data-aos="zoom-in" class="follow">
             <a href="https://www.instagram.com/vansh1190/" target="_blank"> <img src="logoimg/instalogo.png" alt="insta_logo"></a>
             <a href="https://in.linkedin.com/in/vansh-kumar-4774a9218" target="_blank"> <img src="logoimg/linkedin-icon-logo-png-transparent.png"height="48px" alt="IN_logo"></a>
             <a href="https://twitter.com/Vansh1190" target="_blank"><img src="logoimg/twitte_logo.png" height="48px" alt="Twitter_logo"></a>
@@ -385,6 +387,7 @@
                 
            
         })
+        AOS.init();
 
 
         </script>
