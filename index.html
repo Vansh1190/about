@@ -92,7 +92,7 @@
             bottom: 5%;
             font-family: 'Bungee Shade', cursive;
             opacity: 0.8;
-            animation: vansh1 0.5s ;
+            animation: vansh1 0.8s ease-in-out ;
             animation-iteration-count: infinite;
             font-size: large;
             left: -10%;
@@ -281,7 +281,7 @@
         </div>
     </div>
     <div  class="vansh">
-        <h2>HTML</h2>
+        <h2></h2>
     </div>
     <p data-aos="fade-up"
     data-aos-duration="1000" class="myinfo">
@@ -297,8 +297,14 @@
     </p>
     
     <footer  class="folow"> 
+        <a href="https://vansh1190.vercel.app/">
+            <button  id="projects">
+                <div class="projects"></div>
+                New Portfolio <img src="https://static.thenounproject.com/png/640392-200.png" alt="">
+            </button>
+        </a>
+        <br>
         <a href="https://vansh1190.github.io/My-Journey-with-web/">
-
             <button  id="projects">
                 <div class="projects2"></div>
                 My Projects <img src="https://static.thenounproject.com/png/640392-200.png" alt="">
@@ -320,32 +326,31 @@
     <script>
         let n = 1;
         let skills = ["JAVASCRIPT","</HTML>","CSS","REACTJS","MERN", "BOOTSTRAP"]
-        let f = ()=>{
+        // let f = ()=>{
             
-        setInterval(async()=>{
-            if(n==5){
-                n=0;
-            }
-            let target = document.querySelector(".vansh").childNodes[1];
-
-                await( document.querySelector(".vansh").childNodes[1].innerHTML = skills[n]);
-                n++;
-            }
-        ,5000)
-        }
+        // // setInterval(async()=>{
+        // //     if(n==5){
+        // //         n=0;
+        // //     }
+        // //     let target = document.querySelector(".vansh").childNodes[1];
+        // //         document.querySelector(".vansh").childNodes[1].innerHTML = skills[n]
+        // //         n++;
+        // //     }
+        // // ,5000)
+        // }
 
         
         // f();
-        let speed  = 500;
+        let speed  = 200;
         let i =0 ;
         let pos = 1;
         let flag = true;
         // console.log(skills[i])
 
 
-            setTimeout(()=>{
+            // setTimeout(()=>{
                 document.querySelector(".vansh").childNodes[1].innerHTML = "";
-            },speed)
+            // },speed)
             
             let dd = setInterval(()=>{
                 if(i == skills[pos].length){
@@ -359,12 +364,12 @@
                 // clearInterval(dd)
             }
             
-            if(flag){
+            // if(flag){
                 
                 // console.log(skills[pos][i])
                 document.querySelector(".vansh").childNodes[1].innerHTML += skills[pos][i];
                 i++
-            }
+            // }
             // console.log(" I ",i)
         },speed)
 
@@ -384,8 +389,7 @@
             // console.log(x.top ,window.innerHeight)
             console.log("HELLO")
             document.getElementsByClassName("projects2")[0].style.animation = "buttonAnimLeave 0.5s ease-in-out"
-                
-           
+
         })
         AOS.init();
 
